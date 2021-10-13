@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="/js/script.js"></script>
+    <title>NatureBoy's WonderPictures </title>
+</head>
+<body>
+    <h1>NatureBoy's WonderPictures</h1>
+    <nav>
+        <a href="/natures/new">Add A New img</a>
+    </nav>
+    <ul style="list-style: lower-roman;">
+        <% natures.forEach(b => { %>
+            <li style="margin-bottom: 1rem;">
+                <!-- <form method="POST" action="/natures/<%= b._id %>?_method=DELETE" style="display: inline; margin-right: 1rem;">
+                    <input type="submit" value="DELETE">
+                </form> -->
+                <!-- Send a delete request using ajax -->
+                <button data-id="<%= b._id %>">DELETE</button>
+                <a href="/natures/<%= b._id %>">
+                    <%= b.title %>
+                </a>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>

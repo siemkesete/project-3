@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See <%= nature.title %> Details</title>
+</head>
+<body>
+    <h1>See <%= nature.title %> Details</h1>
+    <nav>
+        <a href="/natures">See All natures</a>
+        <a href="/natures/new">Create A New nature</a>
+    </nav>
+    <h3>Author: <%= nature.author %></h3>
+    <% if(nature.completed) { %>
+        <p>You have finished this nature</p>
+    <% } else { %>
+        <p>You have not finished this nature</p>
+    <% } %>
+    <p><%= nature.excerpt %></p>
+</body>
+</html>
